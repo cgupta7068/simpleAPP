@@ -1,0 +1,160 @@
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.quotes-section {
+  margin-bottom: 4rem;
+}
+
+.quotes-section h2 {
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.quote-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-card::before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 4rem;
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+.quote-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-author {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: right;
+  opacity: 0.9;
+}
+
+.contact-details {
+  text-align: center;
+}
+
+.contact-details h2 {
+  color: #555;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-info {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-info h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.contact-image {
+  flex: 0 0 150px;
+  margin-left: 2rem;
+}
+
+.placeholder-image {
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-image {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .quotes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+}

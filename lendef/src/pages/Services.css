@@ -1,0 +1,181 @@
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.services-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.service-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+/* Traditional Calendar Styles */
+.calendar-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.nav-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.calendar-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.calendar-day.header {
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.calendar-day.empty {
+  background: transparent;
+}
+
+.calendar-day:hover:not(.header):not(.empty) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.calendar-day.today {
+  background: #ff6b6b;
+  color: white;
+  font-weight: bold;
+}
+
+/* Digital Calendar Styles */
+.digital-calendar {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.digital-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.date-number {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  color: #ffeb3b;
+}
+
+.date-info {
+  text-align: left;
+}
+
+.date-info .month {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.date-info .year {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.date-info .day {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #4caf50;
+}
+
+.digital-time {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00bcd4;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    max-width: 100%;
+  }
+}
